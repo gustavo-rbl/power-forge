@@ -1,0 +1,6 @@
+@use "../../css/index.scss" as *;
+
+.prices {
+  @include jelloDisplay;
+  padding: $padding-pri;
+}
