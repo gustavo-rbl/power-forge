@@ -1,0 +1,6 @@
+@use "../../css/index.scss" as *;
+
+.notFound {
+  @include jelloDisplay;
+  padding: $padding-pri;
+}
