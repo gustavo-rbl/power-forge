@@ -1,0 +1,59 @@
+@use "../../css/index.scss" as *;
+
+.collage {
+  @include displayGrid(2, 1);
+  gap: $size-2;
+  margin: $size-2 0;
+
+  &_info {
+    display: grid;
+    gap: 1rem;
+    place-content: center;
+  }
+
+  &_imgV01 {
+    display: subgrid;
+    @include displayGrid(5, 5);
+
+    &_background {
+      @include imageCoverCenter;
+      grid-area: 2 / 2 / 6 / 6;
+    }
+
+    &_foreground {
+      @include imageCoverCenter;
+      grid-area: 1 / 1 / 5 / 3;
+      z-index: 1;
+    }
+
+    &_gradient {
+      grid-area: 2 / 2 / 6 /6;
+      background-image: $gradient-transparent-pri;
+    }
+  }
+
+  &_imgV02 {
+    display: subgrid;
+    @include displayGrid(5, 5);
+
+    &_background {
+      @include imageCoverCenter;
+      grid-area: 2 / 1 / 6 / 5;
+    }
+
+    &_foreground {
+      @include imageCoverCenter;
+      grid-area: 1 / 6 / 5 / 4;
+      z-index: 1;
+    }
+
+    &_gradient {
+      grid-area: 2 / 1 / 6 / 5;
+      background-image: $gradient-transparent-pri;
+    }
+  }
+
+  @include mediaQuery("tablet") {
+    @include displayGrid(1, 2);
+  }
+}
