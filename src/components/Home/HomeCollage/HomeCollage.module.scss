@@ -1,0 +1,68 @@
+@use "../../../css/index.scss" as *;
+
+.collage {
+  margin: $size-2 0;
+
+  &_area_2 {
+    &_margin_block {
+      margin-block: $size-1;
+    }
+  }
+
+  &_area_3 {
+    @include displayGrid(3, 3);
+    border: 10px solid $clr-accent-1;
+    grid-template-areas:
+      ".. .. a1"
+      "a3 a2 a2"
+      "a3 .. ..";
+
+    &_subgrid_area_1 {
+      @include displayFlex($size-1, wrap, row, flex-end, center);
+      grid-area: a1;
+      font-size: $size-fluid-3;
+      color: $clr-accent-1;
+    }
+
+    &_subgrid_area_2 {
+      @include displayFlex($size-1, wrap, row, center, center);
+      color: $clr-accent-2;
+      grid-area: a2;
+    }
+
+    &_subgrid_area_3 {
+      @include displayFlex($size-1, wrap, row, center, center);
+      grid-area: a3;
+      color: $gray-7;
+      font-size: $size-fluid-3;
+    }
+  }
+
+  &_area_4 {
+    @include imageCoverCenter;
+    border: 10px solid $clr-accent-2;
+    aspect-ratio: 1;
+  }
+
+  @include mediaQuery("tablet") {
+    @include displayGrid(9, 10);
+
+    &_area_1 {
+      @include displayFlex($size-1, wrap, row, center, center);
+      grid-area: 2 / 1 / 4 / 6;
+    }
+
+    &_area_2 {
+      grid-area: 4 / 1 / 8 / 5;
+    }
+
+    &_area_3 {
+      grid-area: 1 / 6 / 6 / 11;
+    }
+
+    &_area_4 {
+      grid-area: 5 / 5 / 10 / 10;
+      aspect-ratio: auto;
+    }
+  }
+}

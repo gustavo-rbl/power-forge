@@ -1,0 +1,26 @@
+@use "../../../css/index.scss" as *;
+
+.cards {
+  @include displayFlex($size-1, wrap, row, center, space-between);
+  margin: $size-2 0;
+
+  &_card {
+    flex: 1;
+    text-align: center;
+    min-width: 200px;
+
+    &_icon {
+      color: $clr-accent-1;
+      font-size: $size-fluid-3;
+    }
+
+    &_title {
+      color: $clr-accent-2;
+      text-transform: uppercase;
+    }
+
+    &_description {
+      color: $gray-7;
+    }
+  }
+}

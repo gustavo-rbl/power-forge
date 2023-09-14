@@ -1,0 +1,6 @@
+@use "../../css/index.scss" as *;
+
+.home {
+  @include jelloDisplay;
+  padding: $padding-pri;
+}

@@ -1,0 +1,47 @@
+@use "../../../css/index.scss" as *;
+
+.banner {
+  @include displayGrid(10, 10);
+  min-height: 70vh;
+  margin: $size-2 0;
+
+  &_area_1 {
+    grid-area: 1 / 5 / 11 / 11;
+    background-color: $clr-accent-1;
+    background-image: $gradient-pri;
+  }
+
+  &_area_2 {
+    @include imageCoverCenter;
+    grid-area: 1 / 1 / 10 / 11;
+    filter: grayscale(100%);
+  }
+
+  &_area_3 {
+    grid-area: 1 / 1 / 10 / 11;
+
+    background-image: $gradient-transparent-pri;
+    z-index: 1;
+  }
+
+  &_area_4 {
+    grid-area: 3 / 2 / 9 / 7;
+    z-index: 1;
+
+    & h2 {
+      font-family: $font-header;
+      color: $gray-0;
+      font-size: $size-fluid-3;
+      line-height: 1;
+    }
+  }
+
+  @include mediaQuery("desktop") {
+    min-height: 80vh;
+
+    &_area_2,
+    &_area_3 {
+      grid-area: 1 / 1 / 10 / 9;
+    }
+  }
+}

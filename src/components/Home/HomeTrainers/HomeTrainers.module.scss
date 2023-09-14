@@ -1,0 +1,21 @@
+@use "../../../css/index.scss" as *;
+
+.trainers {
+  @include displayFlex($size-1, wrap, row, center, space-evenly);
+  margin: $size-2 0;
+
+  &_trainer {
+    display: grid;
+
+    &_img {
+      width: 100%;
+    }
+
+    &_name {
+      background-color: $clr-accent-1;
+      text-align: center;
+      color: $gray-0;
+      padding: $padding-pri 0;
+    }
+  }
+}
