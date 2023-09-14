@@ -1,0 +1,42 @@
+@use "../../css/index.scss" as *;
+
+.footer {
+  @include jelloDisplay;
+  @include displayFlex($size-2, wrap, column, flex-start, center);
+  padding: $padding-pri;
+
+  &_section {
+    padding: $padding-pri;
+
+    &_hero {
+      font-family: $font-header;
+      font-size: $size-fluid-2;
+      margin-bottom: $size-1;
+      text-transform: uppercase;
+    }
+  }
+
+  &_ul {
+    @include displayFlex($size-1, wrap, column, flex-start, center);
+
+    & li:before {
+      content: "\00BB";
+      margin-right: $size-1;
+      color: $clr-accent-1;
+    }
+
+    & a {
+      @include resetLink($clr-accent-2);
+      @include transitionAll($duration-pri);
+      text-transform: capitalize;
+
+      &:where(:hover, :focus) {
+        color: $clr-accent-1;
+      }
+    }
+  }
+
+  @include mediaQuery("tablet") {
+    @include displayFlex($size-1, wrap, row, flex-start, space-between);
+  }
+}
