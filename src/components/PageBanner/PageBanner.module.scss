@@ -1,0 +1,29 @@
+@use "../../css/index.scss" as *;
+
+.banner {
+  @include displayGrid(1, 2);
+  margin-bottom: $size-2;
+
+  &_background {
+    grid-area: 1 / 1 / 3 / 3;
+    @include imageCoverCenter;
+    min-height: 400px;
+    filter: grayscale(100%);
+  }
+
+  &_title {
+    @include displayFlex($size-1, nowrap, row, center, flex-start);
+    color: $gray-0;
+    font-family: $font-header;
+    font-size: $size-fluid-3;
+    grid-area: 1 / 1;
+    padding: $padding-pri;
+    z-index: 2;
+  }
+
+  &_gradient {
+    grid-area: 1 / 1 / 3 / 3;
+    background-image: $gradient-transparent-pri;
+    z-index: 1;
+  }
+}
