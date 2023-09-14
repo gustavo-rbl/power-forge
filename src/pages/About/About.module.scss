@@ -1,0 +1,36 @@
+@use "../../css/index.scss" as *;
+
+.about {
+  @include jelloDisplay;
+  padding: $padding-pri;
+}
+
+.collageV01 {
+  border: 10px solid $clr-accent-1;
+  padding: calc($padding-pri * 4) $padding-pri;
+
+  &_icon {
+    color: $gray-7;
+    font-size: $size-fluid-3;
+  }
+
+  @include mediaQuery("tablet") {
+    flex-basis: 10%;
+  }
+}
+
+.collageV02 {
+  @include displayGrid(4, 1);
+
+  gap: $size-1;
+  text-align: center;
+
+  & img {
+    filter: grayscale(100%);
+  }
+
+  @include mediaQuery("tablet") {
+    @include displayGrid(2, 2);
+    flex-basis: 40%;
+  }
+}
