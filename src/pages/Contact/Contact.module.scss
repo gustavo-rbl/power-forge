@@ -1,0 +1,12 @@
+@use "../../css/index.scss" as *;
+
+.contact {
+  @include jelloDisplay;
+  padding: $padding-pri;
+}
+
+.cards {
+  display: grid;
+  gap: $size-1;
+  padding-block: calc($padding-pri * 2);
+}
