@@ -1,6 +1,7 @@
 # power-forge
 
-Power Forge is a sample gym website built with React.
+Power Forge is a sample gym website built with React. I created this project to practice my skills in React, React Router, and front end development.
+You can view the live demo [here](https://power-forge.netlify.app/)
 
 ## Installation
 
