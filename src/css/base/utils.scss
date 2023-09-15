@@ -1,0 +1,90 @@
+@use "./variables.scss" as *;
+@use "./mixin.scss" as *;
+@use "./mediaQuery.scss" as *;
+
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  overflow-x: hidden;
+  background-color: $gray-0;
+  font-family: $font-text;
+}
+
+img {
+  width: 100%;
+  margin: auto;
+}
+
+.hero {
+  font-family: $font-header;
+  font-size: $size-fluid-2;
+  text-align: center;
+}
+
+.hero_large {
+  @extend .hero;
+  font-size: $size-fluid-3;
+  line-height: 1;
+  text-align: left;
+}
+
+.text_large {
+  font-size: $size-fluid-2;
+}
+
+.text_gray_0 {
+  color: $gray-0;
+}
+
+.text_accent_1 {
+  color: $clr-accent-1;
+}
+
+.text_accent_2 {
+  color: $clr-accent-2;
+}
+
+.background_accent_2 {
+  background-color: $clr-accent-2;
+}
+
+.padding_large {
+  padding: $size-2;
+}
+
+.icon_large {
+  font-size: $size-fluid-3;
+}
+
+.text_uppercase {
+  text-transform: uppercase;
+}
+
+.text_center {
+  text-align: center;
+}
+
+.two_column {
+  @include displayFlex($size-2, wrap, row, center, center);
+  margin-block: $size-2;
+
+  @include mediaQuery("tablet") {
+    & > * {
+      flex: 1;
+    }
+  }
+}
+
+.list_arrow {
+  & li {
+    margin-left: $size-1;
+  }
+
+  & li:before {
+    content: "\2714";
+    margin-right: $size-1;
+    color: $gray-12;
+  }
+}

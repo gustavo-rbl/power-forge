@@ -7,7 +7,7 @@
   padding: $padding-pri;
   position: sticky;
   top: 0;
-  z-index: 1000;
+  z-index: 10000;
 
   &_hero {
     @include resetLink($clr-accent-2);

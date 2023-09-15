@@ -1,0 +1,38 @@
+@use "../../css/index.scss" as *;
+
+.button {
+  @include displayFlex($size-1, nowrap, row, center, space-between);
+  @include transitionAll($duration-pri);
+  border-radius: 5px;
+  color: $gray-0;
+  cursor: pointer;
+  margin: auto;
+  overflow: hidden;
+  text-decoration: none;
+  width: max-content;
+  min-width: 200px;
+
+  & p {
+    padding: 5px 10px;
+  }
+
+  &:where(:hover, :focus) {
+    transform: scale(1.05);
+  }
+}
+
+.buttonV01 {
+  background-color: darken($clr-accent-1, 15%);
+
+  &_arrow {
+    background-color: $clr-accent-1;
+  }
+}
+
+.buttonV02 {
+  background-color: darken($clr-accent-2, 15%);
+
+  &_arrow {
+    background-color: $clr-accent-2;
+  }
+}

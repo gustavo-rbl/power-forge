@@ -1,0 +1,103 @@
+// font
+@import url("https://fonts.googleapis.com/css2?family=Rubik:wght@800&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Roboto+Mono&display=swap");
+
+$font-header: "Rubik", sans-serif;
+$font-text: "Roboto Mono", monospace;
+
+// color
+$clr-accent-1: #ec2d18;
+$clr-accent-2: #242751;
+$gray-0: #f8f9fa;
+$gray-1: #f1f3f5;
+$gray-2: #e9ecef;
+$gray-3: #dee2e6;
+$gray-4: #ced4da;
+$gray-5: #adb5bd;
+$gray-6: #868e96;
+$gray-7: #495057;
+$gray-8: #343a40;
+$gray-9: #212529;
+$gray-10: #16191d;
+$gray-11: #0d0f12;
+$gray-12: #030507;
+
+// size
+$size-1: 1rem;
+$size-2: 2rem;
+$size-3: 3rem;
+$size-4: 4rem;
+$size-5: 5rem;
+$size-6: 6rem;
+$size-7: 7rem;
+$size-fluid-1: clamp(1rem, 1.5vw, 1.2rem);
+$size-fluid-2: clamp(1.5rem, 3vw, 2rem);
+$size-fluid-3: clamp(2.5rem, 5vw, 5rem);
+
+// misc
+// Hexadecimal color code for transparency
+// https://gist.github.com/lopspower/03fb1cc0ac9f32ef38f4
+$padding-pri: $size-1;
+$duration-pri: 250ms;
+$gradient-transparent-pri: linear-gradient(
+  to bottom right,
+  transparent,
+  #{$clr-accent-2 + "CC"} 95%
+);
+$gradient-pri: linear-gradient(
+    221deg,
+    rgba(107, 107, 107, 0.04) 0%,
+    rgba(107, 107, 107, 0.04) 8%,
+    rgba(31, 31, 31, 0.04) 8%,
+    rgba(31, 31, 31, 0.04) 100%
+  ),
+  linear-gradient(
+    189deg,
+    rgba(228, 228, 228, 0.04) 0%,
+    rgba(228, 228, 228, 0.04) 62%,
+    rgba(54, 54, 54, 0.04) 62%,
+    rgba(54, 54, 54, 0.04) 100%
+  ),
+  linear-gradient(
+    304deg,
+    rgba(18, 18, 18, 0.04) 0%,
+    rgba(18, 18, 18, 0.04) 37%,
+    rgba(233, 233, 233, 0.04) 37%,
+    rgba(233, 233, 233, 0.04) 100%
+  ),
+  linear-gradient(
+    433deg,
+    rgba(201, 201, 201, 0.04) 0%,
+    rgba(201, 201, 201, 0.04) 55%,
+    rgba(47, 47, 47, 0.04) 55%,
+    rgba(47, 47, 47, 0.04) 100%
+  ),
+  linear-gradient(
+    450deg,
+    rgba(172, 172, 172, 0.04) 0%,
+    rgba(172, 172, 172, 0.04) 33%,
+    rgba(26, 26, 26, 0.04) 33%,
+    rgba(26, 26, 26, 0.04) 100%
+  ),
+  linear-gradient(
+    244deg,
+    rgba(11, 11, 11, 0.04) 0%,
+    rgba(11, 11, 11, 0.04) 38%,
+    rgba(87, 87, 87, 0.04) 38%,
+    rgba(87, 87, 87, 0.04) 100%
+  ),
+  linear-gradient(
+    527deg,
+    rgba(199, 199, 199, 0.04) 0%,
+    rgba(199, 199, 199, 0.04) 69%,
+    rgba(4, 4, 4, 0.04) 69%,
+    rgba(4, 4, 4, 0.04) 100%
+  ),
+  linear-gradient(
+    493deg,
+    rgba(36, 36, 36, 0.04) 0%,
+    rgba(36, 36, 36, 0.04) 20%,
+    rgba(91, 91, 91, 0.04) 20%,
+    rgba(91, 91, 91, 0.04) 100%
+  ),
+  linear-gradient(270deg, $clr-accent-2, $clr-accent-1);
